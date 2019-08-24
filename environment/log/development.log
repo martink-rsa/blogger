@@ -6021,3 +6021,307 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.4ms | Allocations: 20116)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/martin/odin_on_rails/blogger/environment/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/martin/odin_on_rails/blogger/environment/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/martin/odin_on_rails/blogger/environment/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to SorceryCore (20190824184058)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar NOT NULL, "email" varchar NOT NULL, "crypted_password" varchar NOT NULL, "salt" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_authors_on_email" ON "authors" ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190824184058"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/martin/odin_on_rails/blogger/environment/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/martin/odin_on_rails/blogger/environment/config/environment.rb:5)
+Started GET "/articles/10" for 127.0.0.1 at 2019-08-24 20:44:39 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:22:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (Duration: 4.5ms | Allocations: 1231)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:28
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:30
+  Rendered collection of articles/_comment.html.erb [2 times] (Duration: 4.0ms | Allocations: 1358)
+  Rendered articles/show.html.erb within layouts/application (Duration: 41.1ms | Allocations: 16786)
+Completed 200 OK in 1052ms (Views: 1014.6ms | ActiveRecord: 2.4ms | Allocations: 1283434)
+
+
+Started GET "/articles/10/edit" for 127.0.0.1 at 2019-08-24 20:44:41 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/models/article.rb:10:in `collect'
+  Rendered articles/_form.html.erb (Duration: 4.7ms | Allocations: 3093)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3385)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 11868)
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2019-08-24 20:44:42 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:22:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (Duration: 0.6ms | Allocations: 337)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:28
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:30
+  Rendered collection of articles/_comment.html.erb [2 times] (Duration: 0.5ms | Allocations: 142)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3459)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.5ms | Allocations: 11793)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-08-24 20:44:43 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1003)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 8971)
+
+
+Started GET "/articles/11" for 127.0.0.1 at 2019-08-24 20:44:44 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:22:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 11]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (Duration: 0.6ms | Allocations: 339)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 11]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of articles/_comment.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2233)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 10578)
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2019-08-24 20:44:46 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:22:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (Duration: 0.5ms | Allocations: 336)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:28
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:30
+  Rendered collection of articles/_comment.html.erb [2 times] (Duration: 0.4ms | Allocations: 142)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3436)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 11771)
+
+
+Started GET "/articles/10/edit" for 127.0.0.1 at 2019-08-24 20:44:49 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/models/article.rb:10:in `collect'
+  Rendered articles/_form.html.erb (Duration: 3.6ms | Allocations: 2281)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2346)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 10674)
+
+
+Started PATCH "/articles/10" for 127.0.0.1 at 2019-08-24 20:44:58 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"s9++kO+OmLjOQpP+xB0Mk+TTvLLyqRwdTMfrGjqBKbWk94UMIBdXDVjJaaMeea/MnO0a7nREMvQEFahz8j415A==", "article"=>{"title"=>"Article 1", "body"=>"This is the body.", "tag_list"=>"tag1, tag2", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa85276ad98 @tempfile=#<Tempfile:/tmp/RackMultipart20190824-10204-1o84enx.png>, @original_filename="colors-two.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"colors-two.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:17:in `block in tag_list='
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "tag1"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:17:in `block in tag_list='
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "tag2"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:17:in `block in tag_list='
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/models/article.rb:18:in `tag_list='
+[paperclip] Trying to link /tmp/RackMultipart20190824-10204-1o84enx.png to /tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png
+[paperclip] Trying to link /tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png to /tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-8qg62.png
+Command :: file -b --mime '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-8qg62.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png[0]'
+Command :: convert '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png[0]' -auto-orient -resize "300x300>" '/tmp/d3705dee4bd7069e27a973bf5689b96f20190824-10204-1vxrg8i'
+[paperclip] Trying to link /tmp/d3705dee4bd7069e27a973bf5689b96f20190824-10204-1vxrg8i to /tmp/bd5875e75c289320e6240015963480c420190824-10204-m89gu2
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png[0]'
+Command :: convert '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png[0]' -auto-orient -resize "100x100>" '/tmp/d3705dee4bd7069e27a973bf5689b96f20190824-10204-72daq2'
+[paperclip] Trying to link /tmp/d3705dee4bd7069e27a973bf5689b96f20190824-10204-72daq2 to /tmp/100f4c57bd7208ad547ce639dba9aff720190824-10204-5i9rz1
+[paperclip] Trying to link /tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-1qw3lhf.png to /tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-w3isxz.png
+Command :: file -b --mime '/tmp/f3a87ae82f755491ba45835f7e6d1a6c20190824-10204-w3isxz.png'
+  [1m[36mArticle Update (0.2ms)[0m  [1m[33mUPDATE "articles" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["image_file_name", "colors-two.png"], ["image_content_type", "image/png"], ["image_file_size", 2431], ["image_updated_at", "2019-08-24 18:44:58.163033"], ["updated_at", "2019-08-24 18:44:58.247501"], ["id", 10]]
+  ↳ app/controllers/articles_controller.rb:34:in `update'
+[paperclip] deleting /home/martin/odin_on_rails/blogger/environment/public/system/articles/images/000/000/010/original/78e63bb2-26ea-4b55-bf94-d3e5514d2b43_2.3acd0d760e2bfa04c8b2d87f889efe12.jpeg
+[paperclip] deleting /home/martin/odin_on_rails/blogger/environment/public/system/articles/images/000/000/010/medium/78e63bb2-26ea-4b55-bf94-d3e5514d2b43_2.3acd0d760e2bfa04c8b2d87f889efe12.jpeg
+[paperclip] deleting /home/martin/odin_on_rails/blogger/environment/public/system/articles/images/000/000/010/thumb/78e63bb2-26ea-4b55-bf94-d3e5514d2b43_2.3acd0d760e2bfa04c8b2d87f889efe12.jpeg
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:34:in `update'
+Redirected to http://localhost:3000/articles/10
+Completed 302 Found in 109ms (ActiveRecord: 8.8ms | Allocations: 19320)
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2019-08-24 20:44:58 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:22:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (Duration: 0.5ms | Allocations: 336)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:28
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:30
+  Rendered collection of articles/_comment.html.erb [2 times] (Duration: 0.5ms | Allocations: 142)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3437)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 11794)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-08-24 20:45:19 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 796)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 8615)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-08-24 20:45:22 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.2ms | Allocations: 1094)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1252)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 9230)
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2019-08-24 20:45:29 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:22:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (Duration: 0.5ms | Allocations: 337)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:28
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:30
+  Rendered collection of articles/_comment.html.erb [2 times] (Duration: 0.4ms | Allocations: 142)
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3442)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.6ms | Allocations: 11776)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2019-08-24 20:45:47 +0200
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.1ms | Allocations: 1869)
+  Rendered authors/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2214)
+Completed 200 OK in 29ms (Views: 19.9ms | ActiveRecord: 1.4ms | Allocations: 15571)
+
+
+Started POST "/authors" for 127.0.0.1 at 2019-08-24 20:45:58 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"authenticity_token"=>"El9BGWsJnzxUdsYplWEJobWF8agDlt9IdKJ1vbG06zo93c71Huz8d6O/GuPTbYyIAWfPUweLjcAi0AsFPyJJZg==", "author"=>{"username"=>"asd", "email"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Author"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:30:in `block in create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("username", "email", "crypted_password", "salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "asd"], ["email", "asd"], ["crypted_password", "$2a$10$auyu0.LruAVVbnHJvwYymOx.I2g/.ZU/jSuA2Tl96l86tG9oBhs.S"], ["salt", "iPQ1zhcVNsXspTWndYro"], ["created_at", "2019-08-24 18:45:59.013200"], ["updated_at", "2019-08-24 18:45:59.013200"]]
+  ↳ app/controllers/authors_controller.rb:30:in `block in create'
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/authors/1
+Completed 302 Found in 57ms (ActiveRecord: 4.4ms | Allocations: 3812)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2019-08-24 20:45:59 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:67:in `set_author'
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 323)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 8931)
+
+
